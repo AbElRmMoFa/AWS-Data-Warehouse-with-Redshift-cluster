@@ -1,7 +1,7 @@
 <div class="_15vzQlp3FJ8f94suLiPCPf ureact-markdown "><h1 id="project-data-warehouse">Project: Data Warehouse</h1>
 <h3 id="introduction">Introduction</h3>
 <p>A music streaming startup, Sparkify, has grown their user base and song database and want to move their processes and data onto the cloud. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.</p>
-<p>we are tasked with building an ETL pipeline that extracts their data from S3, stages them in Redshift, and transforms data into a set of dimensional tables for their analytics team to continue finding insights into what songs their users are listening to. we will be able to test  database and ETL pipeline by running queries given to us by the analytics team from Sparkify and compare your results with their expected results.</p>
+<p>we are tasked with building an ETL pipeline that extracts their data from S3, stages them in Redshift, and transforms data into a set of dimensional tables for their analytics team to continue finding insights into what songs their users are listening to. we will be able to test  database and ETL pipeline by running queries given to us by the analytics team from Sparkify and compare our results with their expected results.</p>
 <h3 id="project-description">Project Description</h3>
 <p>In this project, we will apply  data warehouses with AWS to build an ETL pipeline for a database hosted on Redshift.</p>
 </div>
