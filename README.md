@@ -12,7 +12,7 @@
 <li>Log data: <code>s3://udacity-dend/log_data</code></li>
 </ul>
 <p>Log data json path: <code>s3://udacity-dend/log_json_path.json</code></p>
-<h1 id="song-dataset">Song Dataset</h2>
+<h2 id="song-dataset">Song Dataset</h2>
 <p>The first dataset is a subset of real data from the <a href="http://millionsongdataset.com/" target="_blank">Million Song Dataset</a>. Each file is in JSON format and contains metadata about a song and the artist of that song. The files are partitioned by the first three letters of each song's track ID. For example, here are file paths to two files in this dataset.</p>
 <pre><code class="lang-txt">song_data/A/B/C/TRABCEI128F424C983.json
 song_data/A/A/B/TRAABJL12903CDCF1A.json
