@@ -45,7 +45,7 @@ staging_songs_table_create = ("""CREATE TABLE staging_songs_table
                                 artist_latitude numeric,
                                 artist_longitude numeric,
                                 artist_location varchar,
-                                artist_name varchar,
+                                artist_name varchar(MAX),
                                 song_id varchar,
                                 title varchar,
                                 duration numeric,
@@ -54,8 +54,8 @@ staging_songs_table_create = ("""CREATE TABLE staging_songs_table
 songplay_table_create = ("""CREATE TABLE IF NOT EXISTS  songplays
 
                             (songplay_id integer IDENTITY(0,1),
-                             start_time timestamp ,
-                             user_id int NOT NULL,
+                             start_time timestamp  distkey,
+                             user_id int NOT NULL sortkey,
                              level varchar,
                              song_id varchar,
                              artist_id varchar,
@@ -66,7 +66,7 @@ songplay_table_create = ("""CREATE TABLE IF NOT EXISTS  songplays
 
 user_table_create = ("""CREATE TABLE IF NOT EXISTS users
 
-                    (user_id int PRIMARY KEY NOT NULL,
+                    (user_id int PRIMARY KEY NOT NULL distkey sortkey,
                      first_name varchar,
                      last_name varchar,
                      gender varchar,
@@ -75,28 +75,28 @@ user_table_create = ("""CREATE TABLE IF NOT EXISTS users
 
 song_table_create = ("""CREATE TABLE IF NOT EXISTS songs
 
-                    (song_id varchar PRIMARY KEY NOT NULL,
+                    (song_id varchar PRIMARY KEY NOT NULL distkey,
                      title varchar,
-                     artist_id varchar,
-                     year int,
+                     artist_id varchar sortkey,
+                     year int sortkey,
                      duration float);
 """)
 
 artist_table_create = ("""CREATE TABLE IF NOT EXISTS artists
-                    (artist_id varchar PRIMARY KEY NOT NULL,
-                    name varchar,
+                    (artist_id varchar PRIMARY KEY NOT NULL distkey sortkey,
+                    name varchar sortkey,
                     location varchar,
                     latitude float,
                     longitude float);
 """)
 
 time_table_create = ("""CREATE TABLE IF NOT EXISTS time
-                    (start_time timestamp PRIMARY KEY NOT NULL,
+                    (start_time timestamp PRIMARY KEY NOT NULL distkey sortkey ,
                      hour int,
                      day int,
                      week int,
-                     month int,
-                     year int,
+                     month int sortkey,
+                     year int sortkey,
                      weekday varchar);
 """)
 
