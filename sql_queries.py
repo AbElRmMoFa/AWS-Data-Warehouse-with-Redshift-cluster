@@ -66,11 +66,11 @@ songplay_table_create = ("""CREATE TABLE IF NOT EXISTS  songplays
 
 user_table_create = ("""CREATE TABLE IF NOT EXISTS users
 
-                    (user_id int PRIMARY KEY NOT NULL distkey sortkey,
+                    (user_id int PRIMARY KEY NOT NULL distkey ,
                      first_name varchar,
                      last_name varchar,
                      gender varchar,
-                     level varchar);
+                     level varchar sortkey);
 """)
 
 song_table_create = ("""CREATE TABLE IF NOT EXISTS songs
