@@ -78,12 +78,12 @@ song_table_create = ("""CREATE TABLE IF NOT EXISTS songs
                     (song_id varchar PRIMARY KEY NOT NULL distkey,
                      title varchar,
                      artist_id varchar sortkey,
-                     year int sortkey,
+                     year int ,
                      duration float);
 """)
 
 artist_table_create = ("""CREATE TABLE IF NOT EXISTS artists
-                    (artist_id varchar PRIMARY KEY NOT NULL distkey sortkey,
+                    (artist_id varchar PRIMARY KEY NOT NULL distkey ,
                     name varchar sortkey,
                     location varchar,
                     latitude float,
@@ -91,12 +91,12 @@ artist_table_create = ("""CREATE TABLE IF NOT EXISTS artists
 """)
 
 time_table_create = ("""CREATE TABLE IF NOT EXISTS time
-                    (start_time timestamp PRIMARY KEY NOT NULL distkey sortkey ,
+                    (start_time timestamp PRIMARY KEY NOT NULL distkey  ,
                      hour int,
                      day int,
                      week int,
                      month int sortkey,
-                     year int sortkey,
+                     year int ,
                      weekday varchar);
 """)
 
